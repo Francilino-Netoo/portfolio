@@ -1054,7 +1054,8 @@ span.multiple-text {
 }
 
 .about-img img {
-  width: 25vw;
+  width: 21vw;
+  max-width: 28rem;
   background-color: transparent !important;
   border-radius: 50%;
   object-fit: cover;
@@ -1161,19 +1162,7 @@ span.multiple-text {
 .text-content {
   font-size: 1.5rem;
   color: #9ca3af;
-  max-height: 8.5rem;
-  overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   line-height: 1.6;
-}
-
-.text-content.expanded {
-  max-height: 50rem;
-}
-
-.services-box.expanded {
-  max-height: 100rem;
-  padding-bottom: 8rem;
 }
 
 .services-box i {
@@ -1323,6 +1312,120 @@ span.multiple-text {
 .portfolio-layer a i {
   font-size: 2.4rem;
   color: var(--bg-color);
+}
+
+.project-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.portfolio-layer .project-action {
+  width: auto;
+  height: auto;
+  min-height: 4.2rem;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid var(--main-color);
+  border-radius: 0.9rem;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  gap: 0.6rem;
+}
+
+.portfolio-layer .project-action i {
+  font-size: 1.8rem;
+  color: currentColor;
+}
+
+.portfolio-layer .project-action:hover {
+  background: #fff;
+  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.35);
+}
+
+.project-gallery-modal {
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.gallery-content {
+  width: min(100%, 1100px);
+  max-height: 95vh;
+  background: var(--second-bg-color);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.gallery-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+
+.gallery-header h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.gallery-close {
+  border: 0;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 3.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gallery-viewer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.gallery-viewer img {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  border-radius: 0.8rem;
+}
+
+.gallery-nav {
+  width: 4.4rem;
+  height: 4.4rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+
+.gallery-counter {
+  margin: 1.2rem 0 1.6rem;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 480px) {
+  .project-actions { gap: 0.7rem; }
+  .portfolio-layer .project-action { font-size: 1.1rem; padding: 0.8rem 1rem; }
+  .project-gallery-modal { padding: 1rem; }
+  .gallery-viewer { gap: 0.4rem; padding: 0 0.4rem; }
+  .gallery-nav { width: 3.6rem; height: 3.6rem; font-size: 2.3rem; }
 }
 
 /* CONTACT SECTION */
@@ -1646,6 +1749,12 @@ span.multiple-text {
   display: none;
 }
 
+.sidebar-subtitle,
+.sidebar-nav-title,
+.sidebar-whatsapp {
+  display: none;
+}
+
 /* ---- Desktop (> 1200px) — sidebar permanente ---- */
 @media (min-width: 1201px) {
   /* Oculta o botão hambúrguer e o backdrop */
@@ -1768,12 +1877,50 @@ span.multiple-text {
     border-color: transparent !important;
   }
 
-  .sidebar-brand span {
+  .sidebar-brand .sidebar-logo span {
     background: linear-gradient(45deg, var(--nain-color), var(--accent-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
+  }
+
+  .sidebar-subtitle {
+    display: block;
+    margin-top: 0.5rem;
+    color: #94a3b8;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .sidebar-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: #cbd5e1;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .sidebar-whatsapp i {
+    color: #25d366;
+    font-size: 1.7rem;
+  }
+
+  .sidebar-whatsapp:hover { color: var(--main-color); }
+
+  .sidebar-nav-title {
+    display: block;
+    margin: 1.4rem 2.2rem 0.6rem;
+    color: #64748b;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 
   /* Scrollbar da sidebar */
@@ -1832,6 +1979,69 @@ span.multiple-text {
   }
 
   .navbar.active { transform: translateX(0); }
+
+  .sidebar-brand {
+    display: block;
+    padding: 2rem 2rem 1.4rem;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.14);
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-brand a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--text-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .sidebar-brand .sidebar-logo span {
+    background: linear-gradient(45deg, var(--nain-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sidebar-subtitle,
+  .sidebar-nav-title,
+  .sidebar-whatsapp {
+    display: block;
+  }
+
+  .sidebar-subtitle {
+    margin-top: 0.5rem;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .sidebar-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: #cbd5e1;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  .sidebar-whatsapp i {
+    color: #25d366;
+    font-size: 1.7rem;
+  }
+
+  .sidebar-nav-title {
+    margin: 1.2rem 2rem 0.4rem;
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
 
   .navbar a {
     display: flex;
@@ -2334,6 +2544,98 @@ span.multiple-text {
     line-height: 1.6;
     overflow-wrap: anywhere;
   }
+}
+
+/* Acabamento visual do menu lateral */
+@media (min-width: 1201px) {
+  .navbar {
+    background:
+      radial-gradient(circle at 0 0, rgba(0, 229, 255, 0.13), transparent 32%),
+      linear-gradient(180deg, #070d1b 0%, #0b1120 100%) !important;
+  }
+
+  .navbar > a {
+    position: relative;
+    margin: 0.25rem 1.2rem !important;
+    padding: 1.2rem 1.35rem !important;
+  }
+
+  .navbar > a::before {
+    content: '';
+    position: absolute;
+    left: -1.2rem;
+    width: 0.35rem;
+    height: 2.4rem;
+    border-radius: 0 0.4rem 0.4rem 0;
+    background: var(--main-color);
+    box-shadow: 0 0 1.2rem rgba(0, 229, 255, 0.75);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .navbar > a:hover::before,
+  .navbar > a.active::before {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    background:
+      radial-gradient(circle at 0 0, rgba(0, 229, 255, 0.15), transparent 30%),
+      linear-gradient(180deg, #080d1a 0%, #0b1120 100%);
+  }
+
+  .navbar .sidebar-brand a {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    transform: none !important;
+  }
+
+  .navbar > a {
+    position: relative;
+    margin: 0.25rem 1.2rem !important;
+    padding: 1.15rem 1.35rem !important;
+  }
+
+  .navbar > a::before {
+    content: '';
+    position: absolute;
+    left: -1.2rem;
+    width: 0.3rem;
+    height: 2.3rem;
+    border-radius: 0 0.4rem 0.4rem 0;
+    background: var(--main-color);
+    opacity: 0;
+  }
+
+  .navbar > a:hover::before,
+  .navbar > a.active::before {
+    opacity: 1;
+  }
+}
+
+.navbar > a:focus-visible,
+.sidebar-brand a:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 3px;
+}
+
+.sidebar-brand .sidebar-logo {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebar-brand .sidebar-logo img {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 229, 255, 0.72);
+  box-shadow: 0 0 1.4rem rgba(0, 229, 255, 0.22);
 }
 
 /* Fim do CSS */
