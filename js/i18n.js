@@ -28,7 +28,7 @@
       aboutP1:
         "Formado em Análise e Desenvolvimento de Sistemas, com experiência desde 2021 no desenvolvimento e arquitetura de plataformas SaaS. Especializado em aplicações web escaláveis, APIs REST, sistemas multi-tenant e automações empresariais. Atuo com React, TypeScript, Node.js e Python, integrando serviços externos, bancos de dados, inteligência artificial e infraestrutura.",
       aboutP2:
-        "Possuo sólida formação em Cybersecurity e Banco de Dados, o que me permite aplicar práticas de AppSec e arquitetar sistemas não apenas robustos, mas intrinsecamente seguros. Responsável pela arquitetura, desenvolvimento e evolução de plataformas SaaS — do frontend ao backend, banco de dados, integrações, automações e infraestrutura.",
+        "Também tenho formação em Cybersecurity e Banco de Dados. Na prática, isso significa que aplico conceitos de segurança (AppSec) no dia a dia do desenvolvimento, cuidando da autenticação, permissões e isolamento de dados para evitar vulnerabilidades comuns.",
       credGradTitle: "Graduação — 2023",
       credGradDesc: "Análise e Desenvolvimento de Sistemas",
       credCyberTitle: "Pós — Cybercrime e Cybersecurity",
@@ -145,7 +145,7 @@
       aboutP1:
         "Formado em Análise e Desenvolvimento de Sistemas, com experiência desde 2021 no desenvolvimento e arquitetura de plataformas SaaS. Especializado em aplicações web escaláveis, APIs REST, sistemas multi-tenant e automações empresariais. Trabalho com React, TypeScript, Node.js e Python, integrando serviços externos, bases de dados, inteligência artificial e infraestrutura.",
       aboutP2:
-        "Possuo uma sólida formação em Cybersecurity e Bases de Dados, o que me permite aplicar práticas de AppSec e arquitetar sistemas não apenas robustos, mas intrinsecamente seguros. Responsável pela arquitetura, desenvolvimento e evolução de plataformas SaaS — do frontend ao backend, bases de dados, integrações, automações e infraestrutura.",
+        "Também tenho formação em Cybersecurity e Bases de Dados. Na prática, isto significa que aplico conceitos de segurança (AppSec) no dia a dia do desenvolvimento, cuidando da autenticação, permissões e isolamento de dados para evitar vulnerabilidades comuns.",
       credGradTitle: "Licenciatura — 2023",
       credGradDesc: "Análise e Desenvolvimento de Sistemas",
       credCyberTitle: "Pós-graduação — Cybercrime e Cybersecurity",
@@ -262,7 +262,7 @@
       aboutP1:
         "Graduated in Systems Analysis and Development, with experience since 2021 building and architecting SaaS platforms. Specialized in scalable web applications, REST APIs, multi-tenant systems, and business automation. I work with React, TypeScript, Node.js, and Python, integrating external services, databases, artificial intelligence, and infrastructure.",
       aboutP2:
-        "I also have a strong background in Cybersecurity and Databases, which lets me apply AppSec practices and design systems that are not only robust, but intrinsically secure. Responsible for architecture, development, and evolution of SaaS platforms — from frontend to backend, databases, integrations, automations, and infrastructure.",
+        "I also have training in Cybersecurity and Databases. In practice, that means I apply security concepts (AppSec) in day-to-day development, taking care of authentication, permissions, and data isolation to prevent common vulnerabilities.",
       credGradTitle: "Bachelor's — 2023",
       credGradDesc: "Systems Analysis and Development",
       credCyberTitle: "Postgraduate — Cybercrime and Cybersecurity",
@@ -378,7 +378,7 @@
       aboutP1:
         "Formado en Análisis y Desarrollo de Sistemas, con experiencia desde 2021 en el desarrollo y arquitectura de plataformas SaaS. Especializado en aplicaciones web escalables, APIs REST, sistemas multi-tenant y automatizaciones empresariales. Trabajo con React, TypeScript, Node.js y Python, integrando servicios externos, bases de datos, inteligencia artificial e infraestructura.",
       aboutP2:
-        "Tengo una sólida formación en Cybersecurity y Bases de Datos, lo que me permite aplicar prácticas de AppSec y diseñar sistemas no solo robustos, sino intrínsecamente seguros. Responsable de la arquitectura, desarrollo y evolución de plataformas SaaS — del frontend al backend, bases de datos, integraciones, automatizaciones e infraestructura.",
+        "También tengo formación en Cybersecurity y Bases de Datos. En la práctica, eso significa que aplico conceptos de seguridad (AppSec) en el día a día del desarrollo, cuidando la autenticación, los permisos y el aislamiento de datos para evitar vulnerabilidades comunes.",
       credGradTitle: "Grado — 2023",
       credGradDesc: "Análisis y Desarrollo de Sistemas",
       credCyberTitle: "Posgrado — Cybercrime y Cybersecurity",
