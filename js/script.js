@@ -1,4 +1,7 @@
 (() => {
+  const i18n = () => window.PortfolioI18n;
+  const t = (key) => i18n()?.t?.(key) ?? key;
+
   const menuToggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("nav");
   const backdrop = document.getElementById("nav-backdrop");
@@ -8,7 +11,7 @@
     if (!nav || !menuToggle) return;
     nav.classList.remove("is-open");
     menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Abrir menu");
+    menuToggle.setAttribute("aria-label", t("openMenu"));
     if (backdrop) backdrop.hidden = true;
     document.body.style.overflow = "";
   };
@@ -17,7 +20,7 @@
     if (!nav || !menuToggle) return;
     nav.classList.add("is-open");
     menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", "Fechar menu");
+    menuToggle.setAttribute("aria-label", t("closeMenu"));
     if (backdrop) backdrop.hidden = false;
     document.body.style.overflow = "hidden";
   };
@@ -63,11 +66,13 @@
       const message = document.getElementById("message")?.value.trim();
 
       if (!name || !message) {
-        alert("Preencha nome e mensagem.");
+        alert(t("formAlert"));
         return;
       }
 
-      const text = `Olá, meu nome é ${name}.\nMensagem: ${message}`;
+      const text = t("formWhatsApp")
+        .replace("{name}", name)
+        .replace("{message}", message);
       const url = `https://api.whatsapp.com/send?phone=5588996015972&text=${encodeURIComponent(text)}`;
       window.open(url, "_blank", "noopener,noreferrer");
     });
@@ -99,10 +104,13 @@
   const galleryCounter = document.getElementById("galleryCounter");
   let galleryImages = [];
   let galleryIndex = 0;
+  let galleryProject = "";
 
   const renderGallery = () => {
     galleryImage.src = galleryImages[galleryIndex];
-    galleryCounter.textContent = `${galleryIndex + 1} de ${galleryImages.length}`;
+    galleryCounter.textContent = t("galleryOf")
+      .replace("{current}", String(galleryIndex + 1))
+      .replace("{total}", String(galleryImages.length));
   };
 
   const closeGallery = () => {
@@ -114,6 +122,7 @@
   const openGallery = (project) => {
     galleryImages = projectImages[project] || [];
     if (!galleryImages.length) return;
+    galleryProject = project;
     galleryIndex = 0;
     galleryTitle.textContent =
       project === "projeto1" ? "Automa Web Negócios" : "Automa Web IA";
@@ -144,6 +153,16 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && galleryModal?.getAttribute("aria-hidden") === "false") {
       closeGallery();
+    }
+  });
+
+  window.addEventListener("portfolio:langchange", () => {
+    if (galleryModal?.getAttribute("aria-hidden") === "false" && galleryImages.length) {
+      if (galleryProject === "projeto1" || galleryProject === "projeto2") {
+        galleryTitle.textContent =
+          galleryProject === "projeto1" ? "Automa Web Negócios" : "Automa Web IA";
+      }
+      renderGallery();
     }
   });
 })();

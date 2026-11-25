@@ -19,24 +19,37 @@
     <header class="header">
       <a href="#home" class="brand">Francilino <em>Neto</em></a>
 
-      <nav class="nav" id="nav" aria-label="Navegação principal">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">Sobre</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Serviços</a>
-        <a href="#portfolio">Projetos</a>
-        <a href="#contact">Contato</a>
+      <nav class="nav" id="nav" aria-label="Navegação principal" data-i18n-label="navLabel">
+        <a href="#home" class="active" data-i18n="navHome">Home</a>
+        <a href="#about" data-i18n="navAbout">Sobre</a>
+        <a href="#skills" data-i18n="navSkills">Skills</a>
+        <a href="#services" data-i18n="navServices">Serviços</a>
+        <a href="#portfolio" data-i18n="navProjects">Projetos</a>
+        <a href="#contact" data-i18n="navContact">Contato</a>
         <a
           class="nav-cta"
+          data-wa="nav"
           href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
         >WhatsApp</a>
       </nav>
 
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-tools">
+        <label class="lang-switch">
+          <span class="visually-hidden" data-i18n="langLabel">Idioma</span>
+          <select id="lang-select" aria-label="Idioma" data-i18n-aria="langLabel">
+            <option value="pt-BR">PT-BR</option>
+            <option value="pt-PT">PT-PT</option>
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
+        </label>
+
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" data-i18n-aria="openMenu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
     <div class="nav-backdrop" id="nav-backdrop" hidden></div>
 
@@ -48,21 +61,21 @@
 
         <div class="hero-copy">
           <h1>Francilino Neto</h1>
-          <p class="hero-role">Desenvolvedor Full Stack &amp; Arquiteto de Soluções SaaS</p>
-          <p class="hero-headline">Construindo plataformas escaláveis, automações complexas e sistemas seguros do zero ao deploy.</p>
-          <p class="hero-lead">
+          <p class="hero-role" data-i18n="heroRole">Desenvolvedor Full Stack &amp; Arquiteto de Soluções SaaS</p>
+          <p class="hero-headline" data-i18n="heroHeadline">Construindo plataformas escaláveis, automações complexas e sistemas seguros do zero ao deploy.</p>
+          <p class="hero-lead" data-i18n="heroLead">
             Desde 2021 no desenvolvimento e arquitetura de plataformas SaaS — aplicações web escaláveis, APIs REST, multi-tenant e automações empresariais com React, TypeScript, Node.js e Python.
           </p>
 
           <div class="hero-actions">
-            <a href="#portfolio" class="btn btn-primary">Projetos</a>
+            <a href="#portfolio" class="btn btn-primary" data-i18n="btnProjects">Projetos</a>
             <a href="images/curriculo.pdf" class="btn btn-ghost" download="Curriculo-Francilino-Neto.pdf">
-              <i class="bx bx-download" aria-hidden="true"></i> Currículo
+              <i class="bx bx-download" aria-hidden="true"></i> <span data-i18n="btnResume">Currículo</span>
             </a>
-            <a href="#contact" class="btn btn-ghost">Contato</a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="btnContact">Contato</a>
           </div>
 
-          <div class="hero-social" aria-label="Redes sociais">
+          <div class="hero-social" aria-label="Redes sociais" data-i18n-label="socialLabel">
             <a href="https://t.me/programador_python" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="bx bxl-telegram"></i></a>
             <a href="https://www.instagram.com/automa_web_negocios/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bx bxl-instagram-alt"></i></a>
             <a href="https://www.linkedin.com/in/francilino-neto" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
@@ -76,35 +89,35 @@
       <section class="about section" id="about">
         <div class="about-content">
           <div class="about-copy">
-            <h2>Sobre mim</h2>
-            <p class="section-lead">Desenvolvedor Full Stack e Arquiteto de Soluções · Jan/2021 – Atual</p>
-            <p>
+            <h2 data-i18n="aboutTitle">Sobre mim</h2>
+            <p class="section-lead" data-i18n="aboutLead">Desenvolvedor Full Stack e Arquiteto de Soluções · Jan/2021 – Atual</p>
+            <p data-i18n="aboutP1">
               Formado em Análise e Desenvolvimento de Sistemas, com experiência desde 2021 no desenvolvimento e arquitetura de plataformas SaaS. Especializado em aplicações web escaláveis, APIs REST, sistemas multi-tenant e automações empresariais. Atuo com React, TypeScript, Node.js e Python, integrando serviços externos, bancos de dados, inteligência artificial e infraestrutura.
             </p>
-            <p>
+            <p data-i18n="aboutP2">
               Possuo sólida formação em Cybersecurity e Banco de Dados, o que me permite aplicar práticas de AppSec e arquitetar sistemas não apenas robustos, mas intrinsecamente seguros. Responsável pela arquitetura, desenvolvimento e evolução de plataformas SaaS — do frontend ao backend, banco de dados, integrações, automações e infraestrutura.
             </p>
           </div>
           <div class="about-creds">
             <p>
-              <strong>Graduação — 2023</strong>
-              Análise e Desenvolvimento de Sistemas
+              <strong data-i18n="credGradTitle">Graduação — 2023</strong>
+              <span data-i18n="credGradDesc">Análise e Desenvolvimento de Sistemas</span>
             </p>
             <p>
-              <strong>Pós — Cybercrime e Cybersecurity</strong>
-              Concluída em 2025
+              <strong data-i18n="credCyberTitle">Pós — Cybercrime e Cybersecurity</strong>
+              <span data-i18n="credCyberDesc">Concluída em 2025</span>
             </p>
             <p>
-              <strong>Pós — Banco de Dados</strong>
-              Concluída em 2026
+              <strong data-i18n="credDbTitle">Pós — Banco de Dados</strong>
+              <span data-i18n="credDbDesc">Concluída em 2026</span>
             </p>
             <p>
-              <strong>Perícia Cibernética</strong>
-              Concluída em 2026
+              <strong data-i18n="credForensicsTitle">Perícia Cibernética</strong>
+              <span data-i18n="credForensicsDesc">Concluída em 2026</span>
             </p>
             <p>
-              <strong>Idiomas</strong>
-              Português (Nativo) · Inglês (Técnico)
+              <strong data-i18n="credLangTitle">Idiomas</strong>
+              <span data-i18n="credLangDesc">Português (Nativo) · Inglês (Técnico)</span>
             </p>
           </div>
         </div>
@@ -112,32 +125,32 @@
 
       <section class="skills section" id="skills">
         <div class="section-head">
-          <h2>Competências técnicas</h2>
-          <p class="section-lead">Stack que uso no dia a dia para construir, operar e proteger plataformas SaaS.</p>
+          <h2 data-i18n="skillsTitle">Competências técnicas</h2>
+          <p class="section-lead" data-i18n="skillsLead">Stack que uso no dia a dia para construir, operar e proteger plataformas SaaS.</p>
         </div>
         <div class="skills-grid">
           <article>
-            <h3>Frontend</h3>
+            <h3 data-i18n="skillFrontend">Frontend</h3>
             <p>React.js · TypeScript · JavaScript · HTML5 · CSS3 · Redux · React Flow</p>
           </article>
           <article>
-            <h3>Backend &amp; Automação</h3>
+            <h3 data-i18n="skillBackend">Backend &amp; Automação</h3>
             <p>Node.js · Python · Flask · FastAPI · Selenium · Playwright · Puppeteer · Beautiful Soup · Scrapy · AsyncIO</p>
           </article>
           <article>
-            <h3>Bancos de dados</h3>
+            <h3 data-i18n="skillDb">Bancos de dados</h3>
             <p>PostgreSQL · MySQL · MongoDB · Redis</p>
           </article>
           <article>
-            <h3>DevOps &amp; Infraestrutura</h3>
+            <h3 data-i18n="skillDevops">DevOps &amp; Infraestrutura</h3>
             <p>Git · GitHub · Docker · Nginx · WebSockets · APIs REST</p>
           </article>
           <article>
-            <h3>Segurança</h3>
+            <h3 data-i18n="skillSecurity">Segurança</h3>
             <p>OWASP Top 10 · Burp Suite · OWASP ZAP · Nmap · SQLmap · Hardening Linux</p>
           </article>
           <article>
-            <h3>Engenharia</h3>
+            <h3 data-i18n="skillEng">Engenharia</h3>
             <p>SOLID · Clean Code · CI/CD · Scrum · Kanban · Multi-tenant · AppSec</p>
           </article>
         </div>
@@ -145,80 +158,80 @@
 
       <section class="services section" id="services">
         <div class="section-head">
-          <h2>Serviços</h2>
-          <p class="section-lead">Do produto SaaS à operação segura em produção.</p>
+          <h2 data-i18n="servicesTitle">Serviços</h2>
+          <p class="section-lead" data-i18n="servicesLead">Do produto SaaS à operação segura em produção.</p>
         </div>
         <ul class="service-list">
           <li>
-            <h3>Plataformas SaaS</h3>
-            <p>Arquitetura e evolução de sistemas multi-tenant com isolamento de dados, permissões e escala.</p>
+            <h3 data-i18n="svc1Title">Plataformas SaaS</h3>
+            <p data-i18n="svc1Desc">Arquitetura e evolução de sistemas multi-tenant com isolamento de dados, permissões e escala.</p>
           </li>
           <li>
-            <h3>APIs e backend</h3>
-            <p>APIs REST estáveis com Node.js, Python, Flask e FastAPI, prontas para integrar.</p>
+            <h3 data-i18n="svc2Title">APIs e backend</h3>
+            <p data-i18n="svc2Desc">APIs REST estáveis com Node.js, Python, Flask e FastAPI, prontas para integrar.</p>
           </li>
           <li>
-            <h3>Front-end e dashboards</h3>
-            <p>Interfaces com React e TypeScript, painéis em tempo real e boa experiência de uso.</p>
+            <h3 data-i18n="svc3Title">Front-end e dashboards</h3>
+            <p data-i18n="svc3Desc">Interfaces com React e TypeScript, painéis em tempo real e boa experiência de uso.</p>
           </li>
           <li>
-            <h3>Automações e scraping</h3>
-            <p>Workflows, bots e coleta de dados com Playwright, Selenium, Scrapy e AsyncIO.</p>
+            <h3 data-i18n="svc4Title">Automações e scraping</h3>
+            <p data-i18n="svc4Desc">Workflows, bots e coleta de dados com Playwright, Selenium, Scrapy e AsyncIO.</p>
           </li>
           <li>
-            <h3>Integrações de negócio</h3>
-            <p>WhatsApp, Telegram, Mercado Pago, PIX e serviços externos na operação.</p>
+            <h3 data-i18n="svc5Title">Integrações de negócio</h3>
+            <p data-i18n="svc5Desc">WhatsApp, Telegram, Mercado Pago, PIX e serviços externos na operação.</p>
           </li>
           <li>
-            <h3>Infra e DevOps</h3>
-            <p>Docker, Nginx, CI/CD, monitoramento em VPS e práticas de desenvolvimento seguro.</p>
+            <h3 data-i18n="svc6Title">Infra e DevOps</h3>
+            <p data-i18n="svc6Desc">Docker, Nginx, CI/CD, monitoramento em VPS e práticas de desenvolvimento seguro.</p>
           </li>
         </ul>
       </section>
 
       <section class="why section" id="differentials">
         <div class="section-head">
-          <h2>Segurança &amp; Arquitetura</h2>
-          <p class="section-lead">Práticas de engenharia focadas em qualidade e proteção de dados — o que me torna um dev melhor.</p>
+          <h2 data-i18n="whyTitle">Segurança &amp; Arquitetura</h2>
+          <p class="section-lead" data-i18n="whyLead">Práticas de engenharia focadas em qualidade e proteção de dados — o que me torna um dev melhor.</p>
         </div>
         <div class="why-grid">
           <article>
-            <h3>AppSec</h3>
-            <p>Conceitos do OWASP Top 10, prevenção de SQL Injection, XSS, IDOR e falhas de controle de acesso.</p>
+            <h3 data-i18n="why1Title">AppSec</h3>
+            <p data-i18n="why1Desc">Conceitos do OWASP Top 10, prevenção de SQL Injection, XSS, IDOR e falhas de controle de acesso.</p>
           </article>
           <article>
-            <h3>Infraestrutura segura</h3>
-            <p>Hardening de servidores Linux, configuração segura de Nginx e proteção de ambientes de produção (VPS e Docker).</p>
+            <h3 data-i18n="why2Title">Infraestrutura segura</h3>
+            <p data-i18n="why2Desc">Hardening de servidores Linux, configuração segura de Nginx e proteção de ambientes de produção (VPS e Docker).</p>
           </article>
           <article>
-            <h3>Desenvolvimento seguro</h3>
-            <p>Autenticação robusta, gestão de permissões e isolamento de dados em arquiteturas SaaS.</p>
+            <h3 data-i18n="why3Title">Desenvolvimento seguro</h3>
+            <p data-i18n="why3Desc">Autenticação robusta, gestão de permissões e isolamento de dados em arquiteturas SaaS.</p>
           </article>
           <article>
-            <h3>Metodologias</h3>
-            <p>Princípios SOLID, Clean Code, revisão de código, CI/CD, Scrum e Kanban.</p>
+            <h3 data-i18n="why4Title">Metodologias</h3>
+            <p data-i18n="why4Desc">Princípios SOLID, Clean Code, revisão de código, CI/CD, Scrum e Kanban.</p>
           </article>
         </div>
       </section>
 
       <section class="portfolio section" id="portfolio">
         <div class="section-head">
-          <h2>Projetos</h2>
-          <p class="section-lead">Plataformas SaaS próprias em produção — Jan/2021 até hoje.</p>
+          <h2 data-i18n="projectsTitle">Projetos</h2>
+          <p class="section-lead" data-i18n="projectsLead">Plataformas SaaS próprias em produção — Jan/2021 até hoje.</p>
         </div>
 
         <article class="project">
           <div class="project-media">
-            <span class="project-status">Em produção</span>
+            <span class="project-status" data-i18n="statusLive">Em produção</span>
             <img class="project-carousel" data-project="projeto1" src="images/projeto1/1.png" alt="Automa Web Negócios" />
           </div>
           <div class="project-body">
             <h3>Automa Web Negócios</h3>
-            <p class="project-tag">SaaS multissetorial · +60 segmentos</p>
-            <p>
+            <p class="project-tag" data-i18n="p1Tag">SaaS multissetorial · +60 segmentos</p>
+            <p data-i18n="p1Desc">
               Plataforma SaaS para digitalizar serviços de mais de 60 segmentos (restaurantes, pet shops, academias, lojas e consultorias): catálogo digital, pedidos online, PDV, gestão de mesas, CRM, WhatsApp/Telegram, IA, Mercado Pago/PIX, fidelização e personalização por segmento — com arquitetura multi-tenant, isolamento de dados e gestão de permissões.
             </p>
-            <ul class="tech-list" aria-label="Tecnologias">
+            <ul class="tech-list" aria-label="Tecnologias" data-i18n-label="techLabel">
               <li>React.js</li>
               <li>TypeScript</li>
               <li>Node.js</li>
@@ -228,25 +241,25 @@
             </ul>
             <div class="project-actions">
               <button type="button" class="btn btn-ghost" data-gallery="projeto1">
-                <i class="bx bx-images" aria-hidden="true"></i> Ver imagens
+                <i class="bx bx-images" aria-hidden="true"></i> <span data-i18n="viewImages">Ver imagens</span>
               </button>
-              <a class="btn btn-primary" href="https://automawebnegocios.com.br" target="_blank" rel="noopener noreferrer">Acessar site</a>
+              <a class="btn btn-primary" href="https://automawebnegocios.com.br" target="_blank" rel="noopener noreferrer" data-i18n="visitSite">Acessar site</a>
             </div>
           </div>
         </article>
 
         <article class="project">
           <div class="project-media">
-            <span class="project-status">Em produção</span>
+            <span class="project-status" data-i18n="statusLive">Em produção</span>
             <img class="project-carousel" data-project="projeto2" src="images/projeto2/0.png" alt="Automa Web IA" />
           </div>
           <div class="project-body">
             <h3>Automa Web IA</h3>
-            <p class="project-tag">Automação no-code · workflows · tempo real</p>
-            <p>
+            <p class="project-tag" data-i18n="p2Tag">Automação no-code · workflows · tempo real</p>
+            <p data-i18n="p2Desc">
               Plataforma de automação no-code para workflows e estratégias personalizadas: editor visual com React Flow, análise de dados, monitoramento em VPS, interfaces React/TypeScript com WebSocket, APIs REST, autenticação e permissões — com filas e cache em Python, AsyncIO e Redis, e práticas de desenvolvimento seguro entre serviços.
             </p>
-            <ul class="tech-list" aria-label="Tecnologias">
+            <ul class="tech-list" aria-label="Tecnologias" data-i18n-label="techLabel">
               <li>React Flow</li>
               <li>TypeScript</li>
               <li>FastAPI</li>
@@ -256,9 +269,9 @@
             </ul>
             <div class="project-actions">
               <button type="button" class="btn btn-ghost" data-gallery="projeto2">
-                <i class="bx bx-images" aria-hidden="true"></i> Ver imagens
+                <i class="bx bx-images" aria-hidden="true"></i> <span data-i18n="viewImages">Ver imagens</span>
               </button>
-              <a class="btn btn-primary" href="https://automawebia.ia.br/app/" target="_blank" rel="noopener noreferrer">Acessar plataforma</a>
+              <a class="btn btn-primary" href="https://automawebia.ia.br/app/" target="_blank" rel="noopener noreferrer" data-i18n="visitPlatform">Acessar plataforma</a>
             </div>
           </div>
         </article>
@@ -267,62 +280,66 @@
       <section class="contact section" id="contact">
         <div class="contact-panel">
           <div class="contact-copy">
-            <h2>Vamos conversar</h2>
-            <p class="section-lead">Português (Nativo) · Inglês (Técnico)</p>
+            <h2 data-i18n="contactTitle">Vamos conversar</h2>
+            <p class="section-lead" data-i18n="contactLead">Português (Nativo) · Inglês (Técnico)</p>
             <a
               class="btn btn-primary"
+              data-wa="talk"
               href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino%2C%20quero%20falar%20agora%20sobre%20um%20novo%20projeto.&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="bx bxl-whatsapp" aria-hidden="true"></i> Falar agora
+              <i class="bx bxl-whatsapp" aria-hidden="true"></i> <span data-i18n="talkNow">Falar agora</span>
             </a>
           </div>
           <form class="contact-form" id="contact-form" novalidate>
             <label>
-              Seu nome
+              <span data-i18n="formName">Seu nome</span>
               <input type="text" id="name" name="name" autocomplete="name" required />
             </label>
             <label>
-              Seu projeto
-              <textarea id="message" name="message" rows="5" required placeholder="Conte brevemente o que precisa"></textarea>
+              <span data-i18n="formProject">Seu projeto</span>
+              <textarea id="message" name="message" rows="5" required data-i18n-placeholder="formPlaceholder" placeholder="Conte brevemente o que precisa"></textarea>
             </label>
-            <button type="submit" class="btn btn-primary">Enviar no WhatsApp</button>
+            <button type="submit" class="btn btn-primary" data-i18n="formSubmit">Enviar no WhatsApp</button>
           </form>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© 2026 Francilino Neto. Todos os direitos reservados.</p>
-      <a href="#home" class="footer-top" aria-label="Voltar ao topo"><i class="bx bx-up-arrow-alt"></i></a>
+      <p data-i18n="footerCopy">© 2026 Francilino Neto. Todos os direitos reservados.</p>
+      <a href="#home" class="footer-top" aria-label="Voltar ao topo" data-i18n-aria="backTop"><i class="bx bx-up-arrow-alt"></i></a>
     </footer>
 
     <div id="galleryModal" class="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" aria-hidden="true" hidden>
       <div class="gallery-content">
         <div class="gallery-header">
-          <h2 id="galleryTitle">Imagens do projeto</h2>
-          <button type="button" class="gallery-close" aria-label="Fechar galeria">&times;</button>
+          <h2 id="galleryTitle" data-i18n="galleryTitle">Imagens do projeto</h2>
+          <button type="button" class="gallery-close" aria-label="Fechar galeria" data-i18n-aria="galleryClose">&times;</button>
         </div>
         <div class="gallery-viewer">
-          <button type="button" class="gallery-nav gallery-prev" aria-label="Imagem anterior"><i class="bx bx-chevron-left"></i></button>
+          <button type="button" class="gallery-nav gallery-prev" aria-label="Imagem anterior" data-i18n-aria="galleryPrev"><i class="bx bx-chevron-left"></i></button>
           <img id="galleryImage" src="" alt="" />
-          <button type="button" class="gallery-nav gallery-next" aria-label="Próxima imagem"><i class="bx bx-chevron-right"></i></button>
+          <button type="button" class="gallery-nav gallery-next" aria-label="Próxima imagem" data-i18n-aria="galleryNext"><i class="bx bx-chevron-right"></i></button>
         </div>
         <p id="galleryCounter" class="gallery-counter"></p>
       </div>
     </div>
 
     <a
+      data-wa="float"
       href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.&type=phone_number&app_absent=0"
       target="_blank"
       rel="noopener noreferrer"
       class="whatsapp-float"
       aria-label="Fale comigo no WhatsApp"
+      data-i18n-aria="waFloat"
     >
       <i class="bx bxl-whatsapp"></i>
     </a>
 
+    <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
