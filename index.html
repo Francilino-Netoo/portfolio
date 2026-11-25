@@ -4,659 +4,299 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Criação de sites profissionais, sistemas personalizados e automações para empresas e negócios locais." />
-    <meta name="keywords" content="desenvolvedor, sistemas, automação web, web scraping, python, plataformas digitais" />
+    <meta name="description" content="Desenvolvedor Full Stack e Arquiteto de Soluções SaaS. React, TypeScript, Node.js, Python, APIs REST, multi-tenant e automações." />
     <meta name="author" content="Francilino Neto" />
-  <title>Desenvolvimento de Sites, Sistemas e Automações | Francilino Neto</title>
+    <title>Francilino Neto | Full Stack · Arquiteto de Soluções SaaS</title>
 
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
-    
-    <style>
-      /* Estilos adicionais para as novas seções - mantenha a consistência com seu CSS original */
-      .btn-secondary {
-        background: transparent;
-        border: 2px solid var(--main-color);
-        color: var(--main-color);
-      }
-      .btn-secondary:hover {
-        background: var(--main-color);
-        color: var(--second-bg-color);
-        box-shadow: 0 0 1rem var(--main-color);
-        transform: scale(1.05);
-      }
-      
-      .cta-buttons {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-        flex-wrap: wrap;
-      }
-      
-      /* Seção Diferenciais */
-      .differentials {
-        background: var(--second-bg-color);
-        padding: 8rem 9% 4rem;
-      }
-      
-      .differentials-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        margin-top: 4rem;
-      }
-      
-      .differential-card {
-        background: var(--bg-color);
-        padding: 2rem;
-        border-radius: 2rem;
-        text-align: center;
-        transition: 0.3s ease;
-        border: 1px solid var(--main-color);
-      }
-      
-      .differential-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 1.5rem rgba(0, 255, 255, 0.2);
-      }
-      
-      .differential-card i {
-        font-size: 4.5rem;
-        color: var(--main-color);
-        margin-bottom: 1.5rem;
-      }
-      
-      .differential-card h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-      
-      .differential-card p {
-        font-size: 1.4rem;
-        color: var(--text-color);
-        line-height: 1.6;
-      }
-      
-      /* Seção Processo */
-      .process {
-        padding: 8rem 9% 4rem;
-      }
-      
-      .process-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 2rem;
-        margin-top: 4rem;
-      }
-      
-      .process-step {
-        flex: 1;
-        min-width: 200px;
-        text-align: center;
-        background: var(--second-bg-color);
-        padding: 2rem;
-        border-radius: 2rem;
-        transition: 0.3s ease;
-        border-bottom: 3px solid var(--main-color);
-      }
-      
-      .process-step:hover {
-        transform: translateY(-5px);
-      }
-      
-      .step-number {
-        width: 50px;
-        height: 50px;
-        background: var(--main-color);
-        color: var(--second-bg-color);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 0 auto 1.5rem;
-      }
-      
-      .process-step h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-      
-      .process-step p {
-        font-size: 1.4rem;
-        color: var(--text-color);
-      }
-      
-      /* Ajustes responsivos */
-      @media (max-width: 1024px) {
-        .differentials-container {
-          grid-template-columns: 1fr !important;
-        }
-        .differential-card {
-          font-size: 1.3rem;
-        }
-        .differential-card h3 {
-          font-size: 1.8rem;
-        }
-        .differential-card p {
-          font-size: 1.2rem;
-        }
-      }
-      
-      @media (max-width: 768px) {
-        .cta-buttons {
-          flex-direction: column;
-        }
-        .btn-secondary {
-          margin-left: 0;
-        }
-        .process-container {
-          flex-direction: column;
-        }
-        .differentials-container {
-          grid-template-columns: 1fr !important;
-        }
-        .differentials {
-          padding: 6rem 4% 3rem;
-        }
-        .process {
-          padding: 6rem 4% 3rem;
-        }
-        .differential-card {
-          padding: 1.5rem;
-        }
-        .differential-card i {
-          font-size: 3rem;
-        }
-        .differential-card h3 {
-          font-size: 1.5rem;
-        }
-        .differential-card p {
-          font-size: 1.1rem;
-        }
-        .process-step {
-          min-width: 100%;
-          padding: 1.5rem;
-        }
-        .process-step h3 {
-          font-size: 1.5rem;
-        }
-        .process-step p {
-          font-size: 1.1rem;
-        }
-      }
-      
-      /* Responsive para telas muito pequenas (< 361px) */
-      @media (max-width: 361px) {
-        .social-media a {
-          font-size: 1.8rem !important;
-          width: 3rem !important;
-          height: 3rem !important;
-          line-height: 3rem !important;
-        }
-      }
-      
-      /* Melhorias nos modais */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 999999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.95);
-        backdrop-filter: blur(8px);
-      }
-      
-      .modal-content {
-        background-color: var(--second-bg-color);
-        margin: 0;
-        padding: 0;
-        border: 1px solid var(--main-color);
-        border-radius: 0;
-        width: 100%;
-        height: 100%;
-        max-width: none;
-        max-height: none;
-        overflow-y: auto;
-        position: relative;
-      }
-      
-      .modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 2rem;
-        border-bottom: 1px solid var(--main-color);
-        position: sticky;
-        top: 0;
-        background: var(--second-bg-color);
-        border-radius: 0;
-      }
-      
-      .modal-header h2 {
-        font-size: 2rem;
-        color: var(--main-color);
-        padding-right: 0;
-        margin: 0;
-        line-height: 1.3;
-        flex: 1;
-      }
-      
-      .close {
-        position: static;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 4.2rem;
-        height: 4.2rem;
-        font-size: 3rem;
-        line-height: 1;
-        margin-left: 1rem;
-        cursor: pointer;
-        color: var(--text-color);
-        transition: transform 0.3s ease, color 0.3s ease;
-        flex-shrink: 0;
-        transform-origin: center center;
-      }
-      
-      .close:hover {
-        color: var(--main-color);
-        transform: rotate(90deg);
-      }
-      
-      .modal-body {
-        padding: 2rem;
-      }
-      
-      .article-content h3 {
-        font-size: 1.8rem;
-        color: var(--main-color);
-        margin: 2rem 0 1rem;
-      }
-      
-      .article-content h4 {
-        font-size: 1.6rem;
-        margin: 1.5rem 0 1rem;
-      }
-      
-      .article-content p {
-        margin-bottom: 1.5rem;
-        line-height: 1.8;
-      }
-      
-      .article-content ul {
-        margin: 1rem 0 1.5rem 2rem;
-      }
-      
-      .article-content li {
-        margin-bottom: 0.5rem;
-      }
-      
-      /* WhatsApp Float */
-      .whatsapp-float {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        background: #25d366;
-        color: white;
-        width: 5.5rem;
-        height: 5.5rem;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        box-shadow: 0 0 1rem rgba(37, 211, 102, 0.5);
-        transition: 0.3s;
-        z-index: 100;
-      }
-      
-      .whatsapp-float:hover {
-        transform: scale(1.1);
-        color: white;
-        box-shadow: 0 0 2rem rgba(37, 211, 102, 0.8);
-      }
-
-      /* CTA Final */
-      .final-cta {
-        background: linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(139, 92, 246, 0.08));
-        border-top: 1px solid rgba(0, 229, 255, 0.2);
-        border-bottom: 1px solid rgba(0, 229, 255, 0.2);
-        text-align: center;
-        padding: 7rem 9% 5rem;
-        min-height: auto;
-      }
-
-      .final-cta h2 {
-        font-size: 3.4rem;
-        margin-bottom: 1.2rem;
-      }
-
-      .final-cta p {
-        font-size: 1.7rem;
-        max-width: 800px;
-        margin: 0 auto 2.2rem;
-        color: #cbd5e1;
-      }
-
-      @media (max-width: 768px) {
-        .final-cta {
-          padding: 5rem 4% 3.5rem;
-        }
-
-        .final-cta h2 {
-          font-size: 2.4rem;
-        }
-
-        .final-cta p {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
   </head>
 
   <body>
     <header class="header">
-      <a href="#" class="logo">Portfo<span>lio</span></a>
+      <a href="#home" class="brand">Francilino <em>Neto</em></a>
 
-      <i class="bx bx-menu" id="menu-icon"></i>
-      
-      <div class="menu-backdrop" id="menu-backdrop"></div>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Serviços</a>
+        <a href="#portfolio">Projetos</a>
+        <a href="#contact">Contato</a>
+        <a
+          class="nav-cta"
+          href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.&type=phone_number&app_absent=0"
+          target="_blank"
+          rel="noopener noreferrer"
+        >WhatsApp</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
     </header>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
 
-    <nav class="navbar" aria-label="Navegação principal">
-      <div class="sidebar-brand">
-        <a href="#home" class="sidebar-logo">
-          <img class="sidebar-photo" src="images/about.png" alt="" />
-          <span>Francilino Neto</span>
-        </a>
-        <a class="sidebar-whatsapp" href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
-          (88) 99601-5972
-        </a>
-        <span class="sidebar-subtitle">Desenvolvedor Full Stack</span>
-      </div>
-      <p class="sidebar-nav-title">Navegação</p>
-      <a href="#home" class="active"><i class="bx bx-home-alt"></i>Home</a>
-      <a href="#about"><i class="bx bx-user"></i>Sobre</a>
-      <a href="#services"><i class="bx bx-briefcase-alt"></i>Serviços</a>
-      <a href="#differentials"><i class="bx bx-star"></i>Diferenciais</a>
-      <a href="#process"><i class="bx bx-cog"></i>Processo</a>
-      <a href="#portfolio"><i class="bx bx-folder-open"></i>Projetos</a>
-      <a href="#contact"><i class="bx bx-envelope"></i>Contato</a>
-    </nav>
-
-    <section class="home" id="home">
-      <div class="home-contente">
-        <h3>Transformo ideias em</h3>
-        <h1>Sites, Sistemas e Automações que geram resultados reais.</h1>
-        <h3>Soluções com <span class="multiple-text">resultados reais</span></h3>
-        <p>
-          Desenvolvo aplicações com React, Node.js e Python — linguagem em que tenho mais experiência — usando IA como apoio para ganhar agilidade nos projetos.
-        </p>
-
-        <div class="social-media">
-          <a href="https://t.me/programador_python" target="_blank"><i class='bx bxl-telegram'></i></a>
-          <a href="https://www.instagram.com/automa_web_negocios/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Automa Web Negócios"><i class="bx bxl-instagram-alt"></i></a>
-          <a href="https://www.linkedin.com/in/francilino-neto" target="_blank"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/Francilino-Netoo" target="_blank"><i class="bx bxl-github"></i></a>
-          <a href="https://www.youtube.com/@AutomaWeb" target="_blank"><i class="bx bxl-youtube"></i></a>
-          <a href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text&type=phone_number&app_absent=0" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-visual">
+          <img src="images/about.png" alt="Francilino Neto" width="640" height="640" />
         </div>
-        
-        <div class="cta-buttons">
-          <a href="#contact" class="btn btn-secondary">Solicitar Orçamento</a>
-          <a href="#portfolio" class="btn">Ver Projetos</a>
-          <a href="images/curriculo.pdf" class="btn btn-secondary" download="Curriculo-Francilino-Neto.pdf"><i class="bx bx-download" aria-hidden="true"></i> Baixar currículo</a>
-        </div>
-      </div>
-    </section>
 
-    <section class="about" id="about">
-      <div class="about-img">
-        <img src="images/about.png" alt="Francilino Neto" />
-      </div>
-      <div class="about-content">
-        <h2 class="heading">Sobre <span>mim</span></h2>
-        <h3>Desenvolvedor Full Stack | React, Node.js e Python</h3>
-        <p>
-          Trabalho com React, Node.js e Python, com maior familiaridade em Python. Uso inteligência artificial como apoio no desenvolvimento para acelerar entregas, mantendo atenção à qualidade, segurança e performance de cada solução.
-        </p>
-        <p class="academic-background">
-          <i class="bx bx-graduation" aria-hidden="true"></i>
-          <span><strong>Graduação:</strong> Tecnólogo em Análise e Desenvolvimento de Sistemas pela Estácio.<br><strong>Pós-graduações:</strong> Banco de Dados, Perícia Cibernética e Cybercrime e Cybersecurity.</span>
-        </p>
-      </div>
-    </section>
-
-
-    <section class="services" id="services">
-      <h2 class="heading">Meus <span>Serviços</span></h2>
-      <div class="services-container">
-        <div class="services-box">
-          <i class="bx bx-code"></i>
-          <h3>Back-End & APIs</h3>
-          <p class="text-content">
-            Estruturo o núcleo do seu sistema para operar com estabilidade, velocidade e integração fácil com app, site e automações do seu negócio.
+        <div class="hero-copy">
+          <h1>Francilino Neto</h1>
+          <p class="hero-role">Desenvolvedor Full Stack · Arquiteto de Soluções SaaS</p>
+          <p class="hero-headline">Plataformas SaaS, APIs e automações que escalam a operação do negócio.</p>
+          <p class="hero-lead">
+            Desde 2021 arquiteto e desenvolvo aplicações web escaláveis com React, TypeScript, Node.js e Python — multi-tenant, integrações e infraestrutura inclusos.
           </p>
-        </div>
 
-        <div class="services-box">
-          <i class="bx bxs-paint"></i>
-          <h3>Front-End & Dashboards</h3>
-          <p class="text-content">
-            Crio interfaces e painéis intuitivos para facilitar decisões, acelerar operações e melhorar a experiência dos seus clientes e da sua equipe.
-          </p>
-        </div>
-        <div class="services-box">
-          <i class='bx bx-bot' ></i>
-          <h3>Chatbots & Automação</h3>
-          <p class="text-content">
-            Automatizo atendimento, notificações e fluxos de vendas com bots que reduzem trabalho manual e aumentam a conversão do seu negócio.
-          </p>
-        </div>
-        <div class="services-box">
-          <i class="bx bxs-cog"></i>
-          <h3>DevOps & Automação</h3>
-          <p class="text-content">
-            Organizo deploy, monitoramento e processos para que seu projeto fique mais confiável, escalável e pronto para crescer sem dor de cabeça.
-          </p>
-        </div>
-        <div class="services-box">
-          <i class="bx bxs-search"></i> 
-          <h3>Data Scraping & IA</h3>
-          <p class="text-content">
-            Transformo dados em vantagem competitiva com coleta inteligente e automações que ajudam você a identificar oportunidades e vender mais.
-          </p>
-        </div>
-        
-        <div class="services-box">
-          <i class="bx bx-code-alt"></i>
-          <h3>Sites Profissionais</h3>
-          <p class="text-content">
-            Desenvolvo sites profissionais com foco em autoridade, velocidade e conversão para transformar visitantes em clientes.
-          </p>
-        </div>
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">Ver projetos</a>
+            <a href="#contact" class="btn btn-ghost">Solicitar orçamento</a>
+            <a href="images/curriculo.pdf" class="btn btn-ghost" download="Curriculo-Francilino-Neto.pdf">
+              <i class="bx bx-download" aria-hidden="true"></i> Currículo
+            </a>
+          </div>
 
-        <div class="services-box">
-          <i class="bx bx-cog"></i>
-          <h3>Sistemas Personalizados</h3>
-          <p class="text-content">
-            Crio sistemas sob medida para organizar processos, reduzir retrabalho e dar mais controle sobre vendas, equipe e operação.
-          </p>
-        </div>
-        
-        <div class="services-box">
-          <i class='bx bx-bot'></i>
-          <h3>Automações</h3>
-          <p class="text-content">
-            Automatizo tarefas repetitivas para sua operação ganhar tempo, reduzir erros e escalar com mais produtividade.
-          </p>
-        </div>
-        
-        <div class="services-box">
-          <i class="bx bx-landscape"></i>
-          <h3>Landing Pages</h3>
-          <p class="text-content">
-            Crio landing pages estratégicas para campanhas que captam leads qualificados e aumentam suas vendas.
-          </p>
-        </div>
-
-        <div class="services-box">
-          <i class="bx bx-link-alt"></i>
-          <h3>Integrações</h3>
-          <p class="text-content">
-            Conecto suas ferramentas para centralizar dados e processos, eliminando gargalos e melhorando o fluxo do negócio.
-          </p>
-        </div>
-
-        <div class="services-box">
-          <i class="bx bx-support"></i>
-          <h3>Suporte e Melhorias</h3>
-          <p class="text-content">
-            Mantenho e evoluo seu projeto com melhorias contínuas, correções e novas funcionalidades conforme o seu crescimento.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção Diferenciais -->
-    <section class="differentials" id="differentials">
-      <h2 class="heading">Por que trabalhar <span>comigo?</span></h2>
-      <div class="differentials-container">
-        <div class="differential-card">
-          <i class='bx bx-message-rounded-dots'></i>
-          <h3>Atendimento direto e rápido</h3>
-          <p>Comunicação clara e sem burocracia. Você fala diretamente com o desenvolvedor.</p>
-        </div>
-        <div class="differential-card">
-          <i class='bx bx-customize'></i>
-          <h3>Soluções sob medida</h3>
-          <p>Cada projeto é planejado de acordo com sua operação, meta e realidade de mercado.</p>
-        </div>
-        <div class="differential-card">
-          <i class='bx bx-paint'></i>
-          <h3>Design moderno e funcional</h3>
-          <p>Interface bonita e intuitiva que seus usuários vão adorar usar.</p>
-        </div>
-        <div class="differential-card">
-          <i class='bx bx-code-block'></i>
-          <h3>Código limpo e seguro</h3>
-          <p>Arquitetura bem estruturada para facilitar manutenção e garantir confiabilidade.</p>
-        </div>
-        <div class="differential-card">
-          <i class='bx bx-trending-up'></i>
-          <h3>Foco em resultado real</h3>
-          <p>Não apenas código bonito, mas soluções que trazem ROI para seu negócio.</p>
-        </div>
-        <div class="differential-card">
-          <i class='bx bx-headphone'></i>
-          <h3>Suporte contínuo</h3>
-          <p>Acompanhamento após a entrega para otimizar resultados e evolução do projeto.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção Processo de Trabalho -->
-    <section class="process" id="process">
-      <h2 class="heading">Como <span>funciona</span></h2>
-      <div class="process-container">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <h3>Entendimento</h3>
-          <p>Alinhamos objetivos, cenário atual e prioridades para construir uma solução certa desde o início.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <h3>Planejamento</h3>
-          <p>Defino escopo, cronograma e estratégia com foco em resultado, clareza e previsibilidade de entrega.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <h3>Desenvolvimento</h3>
-          <p>Executo o projeto com qualidade técnica, segurança e performance, mantendo você atualizado em cada etapa.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <h3>Entrega</h3>
-          <p>Publicação assistida, validação final e suporte inicial para garantir uso rápido e consistente.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="portfolio" id="portfolio">
-      <h2 class="heading">Meus <span>Projetos</span></h2>
-      
-      <div class="porfolio-container">
-
-        <div class="portfolio-box">
-          <div class="portfolio-badge"><i class="bx bxs-rocket"></i> 1º Em Produção</div>
-          <img class="project-carousel" data-project="projeto1" src="images/projeto1/1.png" alt="Automa Web Negócios" />
-          <div class="portfolio-layer">
-            <h4>Automa Web Negócios</h4>
-            <p>Plataforma para negócios com catálogo digital, pedidos, agendamentos e gestão do estabelecimento.</p>
-            <div class="project-actions">
-              <button type="button" class="project-action" data-gallery="projeto1"><i class="bx bx-images"></i> Ver imagens</button>
-              <a class="project-action" href="https://automawebnegocios.com.br" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i> Acessar site</a>
-            </div>
+          <div class="hero-social" aria-label="Redes sociais">
+            <a href="https://t.me/programador_python" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="bx bxl-telegram"></i></a>
+            <a href="https://www.instagram.com/automa_web_negocios/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bx bxl-instagram-alt"></i></a>
+            <a href="https://www.linkedin.com/in/francilino-neto" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/Francilino-Netoo" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+            <a href="https://www.youtube.com/@AutomaWeb" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bx bxl-youtube"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
           </div>
         </div>
+      </section>
 
-        <div class="portfolio-box">
-          <div class="portfolio-badge"><i class="bx bxs-rocket"></i> 2º Em Produção</div>
-          <img class="project-carousel" data-project="projeto2" src="images/projeto2/0.png" alt="Plataforma de análise e automação para mercado financeiro" />
-          <div class="portfolio-layer">
-            <h4>Plataforma de Análise de Mercado</h4>
-            <p>Painel para análise de dados, organização de estratégias, sinais e automação operacional sob controle do usuário.</p>
-            <div class="project-actions">
-              <button type="button" class="project-action" data-gallery="projeto2"><i class="bx bx-images"></i> Ver imagens</button>
-              <a class="project-action" href="https://automawebia.ia.br/app/" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i> Acessar site</a>
-            </div>
+      <section class="about section" id="about">
+        <div class="about-content">
+          <h2>Sobre mim</h2>
+          <p class="section-lead">Full Stack e Arquiteto de Soluções SaaS desde 2021.</p>
+          <p>
+            Formado em Análise e Desenvolvimento de Sistemas. Atuo no frontend, backend, banco de dados, integrações, automações e infraestrutura — com foco em aplicações web escaláveis, APIs REST, sistemas multi-tenant e automações empresariais.
+          </p>
+          <div class="about-creds">
+            <p>
+              <strong>Graduação — 2023</strong>
+              Análise e Desenvolvimento de Sistemas
+            </p>
+            <p>
+              <strong>Pós — Cybercrime e Cybersecurity</strong>
+              Concluída em 2025
+            </p>
+            <p>
+              <strong>Pós — Banco de Dados</strong>
+              Concluída em 2026
+            </p>
+            <p>
+              <strong>Idiomas</strong>
+              Português nativo · Inglês técnico
+            </p>
           </div>
         </div>
+      </section>
 
-
-      </div>
-    </section>
-     
-    <section class="contact" id="contact">
-      <h2 class="heading">Entre em <span>Contato!</span></h2>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" id="name" placeholder="Seu nome" required />
+      <section class="skills section" id="skills">
+        <div class="section-head">
+          <h2>Competências técnicas</h2>
+          <p class="section-lead">Stack que uso no dia a dia para construir e evoluir plataformas SaaS.</p>
         </div>
-        
-        <textarea id="message" cols="30" rows="10" placeholder="Conte brevemente seu projeto" required></textarea>
-        
-        <button type="button" class="btn" id="sendMessageBtn">Enviar Mensagem</button>
-      </form>
-    </section>
+        <div class="skills-grid">
+          <article>
+            <h3>Frontend</h3>
+            <p>React.js · TypeScript · JavaScript · HTML5 · CSS3 · Redux</p>
+          </article>
+          <article>
+            <h3>Backend</h3>
+            <p>Node.js · Python · Flask · FastAPI</p>
+          </article>
+          <article>
+            <h3>Arquitetura</h3>
+            <p>SaaS · Multi-tenant · APIs REST · Arquitetura de aplicações</p>
+          </article>
+          <article>
+            <h3>Bancos de dados</h3>
+            <p>PostgreSQL · MySQL · Redis · MongoDB</p>
+          </article>
+          <article>
+            <h3>Automação</h3>
+            <p>Selenium · Playwright · Puppeteer · Beautiful Soup · Scrapy</p>
+          </article>
+          <article>
+            <h3>Processamento</h3>
+            <p>AsyncIO · Filas · Cache · Processamento assíncrono</p>
+          </article>
+          <article>
+            <h3>Integrações</h3>
+            <p>WhatsApp · Telegram · Mercado Pago · PIX · APIs externas</p>
+          </article>
+          <article>
+            <h3>Engenharia</h3>
+            <p>Scrum/Kanban · SOLID · Clean Code · Docker · CI/CD · Nginx · Segurança</p>
+          </article>
+        </div>
+      </section>
 
-    <section class="final-cta">
-      <h2>Pronto para levar seu negócio para o próximo nível?</h2>
-      <p>Solicite um orçamento e descubra como um site, sistema ou automação pode aumentar seus resultados.</p>
-      <a href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino%2C%20quero%20falar%20agora%20sobre%20um%20novo%20projeto.&type=phone_number&app_absent=0" target="_blank" class="btn">Falar Agora</a>
-    </section>
-   
+      <section class="services section" id="services">
+        <div class="section-head">
+          <h2>Serviços</h2>
+          <p class="section-lead">Do produto SaaS à automação da operação.</p>
+        </div>
+        <ul class="service-list">
+          <li>
+            <h3>Plataformas SaaS</h3>
+            <p>Arquitetura e evolução de sistemas multi-tenant com isolamento de dados e escala.</p>
+          </li>
+          <li>
+            <h3>APIs e backend</h3>
+            <p>APIs REST estáveis com Node.js, Python, Flask e FastAPI, prontas para integrar.</p>
+          </li>
+          <li>
+            <h3>Front-end e dashboards</h3>
+            <p>Interfaces com React e TypeScript, painéis em tempo real e boa experiência de uso.</p>
+          </li>
+          <li>
+            <h3>Automações e scraping</h3>
+            <p>Workflows, bots e coleta de dados com Playwright, Selenium, Scrapy e AsyncIO.</p>
+          </li>
+          <li>
+            <h3>Integrações de negócio</h3>
+            <p>WhatsApp, Telegram, Mercado Pago, PIX e serviços externos na operação.</p>
+          </li>
+          <li>
+            <h3>Infra e DevOps</h3>
+            <p>Docker, Nginx, CI/CD, monitoramento em VPS e práticas de desenvolvimento seguro.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="why section" id="differentials">
+        <div class="section-head">
+          <h2>Como eu entrego</h2>
+          <p class="section-lead">Práticas de engenharia que uso nos produtos em produção.</p>
+        </div>
+        <div class="why-grid">
+          <article>
+            <h3>Arquitetura SaaS</h3>
+            <p>Multi-tenant, APIs REST e aplicações pensadas para crescer com segurança.</p>
+          </article>
+          <article>
+            <h3>Código limpo</h3>
+            <p>SOLID, Clean Code e revisão contínua para facilitar manutenção.</p>
+          </article>
+          <article>
+            <h3>DevOps na prática</h3>
+            <p>Docker, Nginx, CI/CD e monitoramento em VPS no ciclo de entrega.</p>
+          </article>
+          <article>
+            <h3>Segurança</h3>
+            <p>Desenvolvimento seguro aplicado em autenticação, dados e infraestrutura.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="portfolio section" id="portfolio">
+        <div class="section-head">
+          <h2>Projetos</h2>
+          <p class="section-lead">Plataformas SaaS próprias em produção — Jan/2021 até hoje.</p>
+        </div>
+
+        <article class="project">
+          <div class="project-media">
+            <span class="project-status">Em produção</span>
+            <img class="project-carousel" data-project="projeto1" src="images/projeto1/1.png" alt="Automa Web Negócios" />
+          </div>
+          <div class="project-body">
+            <h3>Automa Web Negócios</h3>
+            <p class="project-tag">SaaS multissetorial · +60 segmentos</p>
+            <p>
+              Plataforma para digitalizar serviços (restaurantes, pet shops, academias, lojas e consultorias): catálogo digital, pedidos, PDV, CRM, WhatsApp/Telegram, Mercado Pago/PIX e arquitetura multi-tenant.
+            </p>
+            <ul class="tech-list" aria-label="Tecnologias">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Node.js</li>
+              <li>Python</li>
+              <li>PostgreSQL</li>
+            </ul>
+            <div class="project-actions">
+              <button type="button" class="btn btn-ghost" data-gallery="projeto1">
+                <i class="bx bx-images" aria-hidden="true"></i> Ver imagens
+              </button>
+              <a class="btn btn-primary" href="https://automawebnegocios.com.br" target="_blank" rel="noopener noreferrer">Acessar site</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <span class="project-status">Em produção</span>
+            <img class="project-carousel" data-project="projeto2" src="images/projeto2/0.png" alt="Automa Web IA" />
+          </div>
+          <div class="project-body">
+            <h3>Automa Web IA</h3>
+            <p class="project-tag">Automação no-code · workflows · tempo real</p>
+            <p>
+              Plataforma de automação, estratégia e marketing com editor visual (React Flow), WebSockets, filas/cache com Python AsyncIO e Redis, análise de dados e monitoramento em VPS.
+            </p>
+            <ul class="tech-list" aria-label="Tecnologias">
+              <li>React Flow</li>
+              <li>TypeScript</li>
+              <li>FastAPI</li>
+              <li>Flask</li>
+              <li>Redis</li>
+              <li>Docker</li>
+            </ul>
+            <div class="project-actions">
+              <button type="button" class="btn btn-ghost" data-gallery="projeto2">
+                <i class="bx bx-images" aria-hidden="true"></i> Ver imagens
+              </button>
+              <a class="btn btn-primary" href="https://automawebia.ia.br/app/" target="_blank" rel="noopener noreferrer">Acessar site</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <h2>Vamos conversar</h2>
+            <p class="section-lead">Conte o que você precisa. Respondo pelo WhatsApp ou e-mail: francilinonetoo@gmail.com</p>
+            <a
+              class="btn btn-primary"
+              href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino%2C%20quero%20falar%20agora%20sobre%20um%20novo%20projeto.&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bxl-whatsapp" aria-hidden="true"></i> Falar agora
+            </a>
+          </div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <label>
+              Seu nome
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Seu projeto
+              <textarea id="message" name="message" rows="5" required placeholder="Conte brevemente o que precisa"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Enviar no WhatsApp</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer">
-      <div class="footer-text">
-        <p>Copyright &copy; 2026 por Francilino Neto | Todos os direitos reservados.</p>
-
-      </div>
-      <div class="footer-iconTop">
-        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-      </div>
+      <p>© 2026 Francilino Neto. Todos os direitos reservados.</p>
+      <a href="#home" class="footer-top" aria-label="Voltar ao topo"><i class="bx bx-up-arrow-alt"></i></a>
     </footer>
 
-    <div id="galleryModal" class="modal project-gallery-modal" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" aria-hidden="true">
+    <div id="galleryModal" class="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" aria-hidden="true" hidden>
       <div class="gallery-content">
         <div class="gallery-header">
           <h2 id="galleryTitle">Imagens do projeto</h2>
@@ -671,120 +311,16 @@
       </div>
     </div>
 
-   <!-- WhatsApp Flutuante -->
-    <a href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.&type=phone_number&app_absent=0" 
-       target="_blank" class="whatsapp-float" title="Fale comigo no WhatsApp">
+    <a
+      href="https://api.whatsapp.com/send/?phone=%2B5588996015972&text=Olá%20Francilino,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.&type=phone_number&app_absent=0"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-float"
+      aria-label="Fale comigo no WhatsApp"
+    >
       <i class="bx bxl-whatsapp"></i>
     </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
     <script src="js/script.js"></script>
-    <script>
-
-      document.getElementById('sendMessageBtn').addEventListener('click', function() {
-      
-        const name = document.getElementById('name').value;
-        
-        const message = document.getElementById('message').value;
-    
-        if (!name || !message) {
-          alert('Por favor, preencha todos os campos.');
-          return;
-        }
-    
-        const whatsappMessage = `Olá, meu nome é ${name}.\n Mensagem: ${message}`;
-    
-        const whatsappLink = `https://api.whatsapp.com/send?phone=5588996015972&text=${encodeURIComponent(whatsappMessage)}`;
-    
-        window.open(whatsappLink, '_blank');
-      });
-      document.addEventListener('DOMContentLoaded', () => {
-          document.querySelectorAll('.link-external5').forEach(link => {
-              
-              if (link.getAttribute('href') === 'dese' || !link.getAttribute('href')) {
-                  link.addEventListener('click', (event) => {
-                      event.preventDefault(); 
-                      alert('Este projeto está em desenvolvimento :)');
-                  });
-              }
-          });
-          document.querySelectorAll('.link-external6').forEach(link => {
-            
-            if (link.getAttribute('href') === 'dese' || !link.getAttribute('href')) {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault(); 
-                    alert('Só é uma demonstração, ele esta dispobivél no site de Apps Android :)');
-                });
-            }
-        });
-      });
-      const projectImages = {
-        projeto1: Array.from({ length: 12 }, (_, index) => `images/projeto1/${index + 1}.png`),
-        projeto2: Array.from({ length: 5 }, (_, index) => `images/projeto2/${index}.png`)
-      };
-
-      document.querySelectorAll('.project-carousel').forEach((image) => {
-        const images = projectImages[image.dataset.project];
-        let currentImage = 0;
-        setInterval(() => {
-          currentImage = (currentImage + 1) % images.length;
-          image.style.opacity = '0';
-          setTimeout(() => {
-            image.src = images[currentImage];
-            image.style.opacity = '1';
-          }, 250);
-        }, 3500);
-      });
-
-      const galleryModal = document.getElementById('galleryModal');
-      const galleryImage = document.getElementById('galleryImage');
-      const galleryTitle = document.getElementById('galleryTitle');
-      const galleryCounter = document.getElementById('galleryCounter');
-      let galleryImages = [];
-      let galleryIndex = 0;
-
-      function renderGalleryImage() {
-        galleryImage.src = galleryImages[galleryIndex];
-        galleryCounter.textContent = `${galleryIndex + 1} de ${galleryImages.length}`;
-      }
-
-      function closeGallery() {
-        galleryModal.style.display = 'none';
-        galleryModal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-
-      document.querySelectorAll('[data-gallery]').forEach((button) => {
-        button.addEventListener('click', () => {
-          const project = button.dataset.gallery;
-          galleryImages = projectImages[project];
-          galleryIndex = 0;
-          galleryTitle.textContent = project === 'projeto1' ? 'Automa Web Negócios' : 'Plataforma de Análise de Mercado';
-          renderGalleryImage();
-          galleryModal.style.display = 'flex';
-          galleryModal.setAttribute('aria-hidden', 'false');
-          document.body.style.overflow = 'hidden';
-        });
-      });
-
-      document.querySelector('.gallery-close').addEventListener('click', closeGallery);
-      document.querySelector('.gallery-prev').addEventListener('click', () => {
-        galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
-        renderGalleryImage();
-      });
-      document.querySelector('.gallery-next').addEventListener('click', () => {
-        galleryIndex = (galleryIndex + 1) % galleryImages.length;
-        renderGalleryImage();
-      });
-      galleryModal.addEventListener('click', (event) => {
-        if (event.target === galleryModal) closeGallery();
-      });
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && galleryModal.style.display === 'flex') closeGallery();
-      });
-
-    </script>
-    
   </body>
 </html>
