@@ -95,8 +95,7 @@
       viewImages: "Ver imagens",
       visitSite: "Acessar site",
       visitPlatform: "Acessar plataforma",
-      contactTitle: "Vamos conversar",
-      talkNow: "Falar agora",
+      contactTitle: "Falar agora",
       formName: "Seu nome",
       formProject: "Seu projeto",
       formPlaceholder: "Conte brevemente o que precisa",
@@ -211,8 +210,7 @@
       viewImages: "Ver imagens",
       visitSite: "Aceder ao site",
       visitPlatform: "Aceder à plataforma",
-      contactTitle: "Vamos conversar",
-      talkNow: "Falar agora",
+      contactTitle: "Falar agora",
       formName: "O seu nome",
       formProject: "O seu projeto",
       formPlaceholder: "Descreva brevemente o que precisa",
@@ -327,8 +325,7 @@
       viewImages: "View images",
       visitSite: "Visit site",
       visitPlatform: "Open platform",
-      contactTitle: "Let's talk",
-      talkNow: "Talk now",
+      contactTitle: "Talk now",
       formName: "Your name",
       formProject: "Your project",
       formPlaceholder: "Briefly tell me what you need",
@@ -442,8 +439,7 @@
       viewImages: "Ver imágenes",
       visitSite: "Visitar sitio",
       visitPlatform: "Abrir plataforma",
-      contactTitle: "Hablemos",
-      talkNow: "Hablar ahora",
+      contactTitle: "Hablar ahora",
       formName: "Tu nombre",
       formProject: "Tu proyecto",
       formPlaceholder: "Cuéntame brevemente qué necesitas",
@@ -519,9 +515,6 @@
 
     const navWa = document.querySelector("[data-wa='nav']");
     if (navWa) navWa.href = waBase.replace("{text}", encodeURIComponent(t("waNav")));
-
-    const talkWa = document.querySelector("[data-wa='talk']");
-    if (talkWa) talkWa.href = waBase.replace("{text}", encodeURIComponent(t("waTalk")));
 
     const floatWa = document.querySelector("[data-wa='float']");
     if (floatWa) floatWa.href = waBase.replace("{text}", encodeURIComponent(t("waFloatMsg")));

@@ -636,8 +636,11 @@ button {
 /* Contact */
 .contact-panel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 4vw, 4rem);
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  justify-items: stretch;
+  max-width: 64rem;
+  margin-inline: auto;
   padding: clamp(2.4rem, 4vw, 4rem);
   background:
     linear-gradient(135deg, var(--lime-soft), transparent 42%),
@@ -645,14 +648,23 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.contact-copy .btn {
-  margin-top: 1.4rem;
+.contact-copy {
+  text-align: center;
+}
+
+.contact-copy h2 {
+  margin-bottom: 0;
 }
 
 .contact-form {
   display: grid;
   gap: 1.4rem;
   align-content: start;
+  width: 100%;
+}
+
+.contact-form .btn {
+  justify-self: stretch;
 }
 
 .contact-form label {
@@ -677,10 +689,6 @@ button {
 .contact-form textarea:focus {
   border-color: var(--lime);
   outline: none;
-}
-
-.contact-form .btn {
-  justify-self: start;
 }
 
 /* Footer */
@@ -880,9 +888,6 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .contact-panel {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
